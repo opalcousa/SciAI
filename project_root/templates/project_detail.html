@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <div id="project-detail"></div>
+  <script src="{% static 'js/react_components/ProjectComponent.jsx' %}"></script>
+  <script>
+    ReactDOM.render(
+      <ProjectComponent project={{{ project | escapejs | safe }}} />,
+      document.getElementById('project-detail')
+    );
+  </script>
+{% endblock %}

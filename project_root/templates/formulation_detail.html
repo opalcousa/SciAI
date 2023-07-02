@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <div id="formulation-detail"></div>
+  <script src="{% static 'js/react_components/FormulationComponent.jsx' %}"></script>
+  <script>
+    ReactDOM.render(
+      <FormulationComponent formulation={{{ formulation | safe }}} />,
+      document.getElementById('formulation-detail')
+    );
+  </script>
+{% endblock %}

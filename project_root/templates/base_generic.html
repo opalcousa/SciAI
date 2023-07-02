@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Lab Management</title>
+    <!-- Django static files -->
+    {% load static %}
+    <!-- React JS -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel JS -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+    <header>
+        <h1>R&D Lab Management</h1>
+    </header>
+    <main>
+        <div id="inventory"></div>
+        <div id="projects"></div>
+        <div id="formulations"></div>
+        <div id="ai_assistant"></div>
+    </main>
+    <footer>
+        <p>© 2022 R&D Lab Management. All rights reserved.</p>
+    </footer>
+    <!-- React Components -->
+    <script type="text/babel" src="{% static 'js/react_components/InventoryComponent.jsx' %}"></script>
+    <script type="text/babel" src="{% static 'js/react_components/ProjectComponent.jsx' %}"></script>
+    <script type="text/babel" src="{% static 'js/react_components/FormulationComponent.jsx' %}"></script>
+    <script type="text/babel" src="{% static 'js/react_components/AIAssistantComponent.jsx' %}"></script>
+    <script type="text/babel" src="{% static 'js/react_components/App.jsx' %}"></script>
+    <script type="text/babel" src="{% static 'js/react_components/index.jsx' %}"></script>
+</body>
+</html>
